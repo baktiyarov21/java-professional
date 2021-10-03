@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>jsonLesson</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <spring.version>4.1.1</spring.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+
+    <name>JSON parsing</name>
+    <description>Parsing json with gson</description>
+    <url>json.com</url>
+
+    <licenses>
+        <license>
+            <name>SS-FF-DD</name>
+            <comments>Free</comments>
+        </license>
+    </licenses>
+
+    <organization>
+        <url>mysite.com</url>
+        <name>Arsen and Co.</name>
+    </organization>
+
+    <developers>
+        <developer>
+            <name>Arsen</name>
+            <email>a_baktiyarov@inbox.ru</email>
+        </developer>
+    </developers>
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.spring.framework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+    </dependencies>
+
+
+
+    <repositories>
+        <repository>
+            <name>my-repo</name>
+            <id>repo</id>
+            <url>,y-repo.com</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <url>aa</url>
+            <id>1</id>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

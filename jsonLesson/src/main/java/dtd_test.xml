@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="myXSD.xsd">
+    <country countryCode="KG">
+        <name short_name="KGZ" currency="som">Kyrgyzstan</name>
+        <capital>Bishkek</capital>
+        <description>Central Asia</description>
+        <visa_cost currency="kgz">23</visa_cost>
+    </country>
+    <country countryCode="US">
+        <name short_name="USA">United States of America</name>
+        <capital>Washington</capital>
+        <description>North America</description>
+        <visa_cost currency="us">23</visa_cost>
+    </country>
+</root>

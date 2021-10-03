@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+    <person>
+        <name>Arsen</name>
+        <last_name>Baktiyarov</last_name>
+        <age born_year="2002">18</age>
+    </person>
+    <person>
+        <name>Argen</name>
+        <last_name>Dzhumabekov</last_name>
+        <age>11</age>
+    </person>
+</people>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book id="01" isnb="3724872">
+        <title>You</title>
+        <author>Karoline Kepnes</author>
+    </book>
+    <book id="02" isnb="4584872">
+        <title>Sherlok Holmes</title>
+        <author>Arthur Conan Doyle</author>
+    </book>
+</books>

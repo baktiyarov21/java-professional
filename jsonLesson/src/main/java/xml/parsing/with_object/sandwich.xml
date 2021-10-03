@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sandwich>
+    <title>Cheese Sandwich</title>
+    <ingridients>
+        <ingridient qty="2">bread slice</ingridient>
+        <ingridient qty="2">cheese slice</ingridient>
+        <ingridient>margarine pat</ingridient>
+    </ingridients>
+</sandwich>

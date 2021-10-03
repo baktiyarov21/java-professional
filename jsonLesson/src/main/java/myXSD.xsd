@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root" type="rootType"/>
+    <xs:complexType name="countryType">
+        <xs:sequence>
+            <xs:element name="name" type="nameType"></xs:element>
+            <xs:element name="capital" type="xs:string"></xs:element>
+            <xs:element name="description" type="xs:string"></xs:element>
+            <xs:element name="visa_cost" type="visaType"></xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="countryCode" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="visaType">
+        <xs:simpleContent>
+            <xs:extension base="xs:double">
+                <xs:attribute type="xs:string" name="currency" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="nameType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="short_name" use="required"></xs:attribute>
+                <xs:attribute type="xs:string" name="currency" use="optional"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="rootType">
+        <xs:sequence>
+            <xs:element type="countryType" name="country" maxOccurs="unbounded" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+

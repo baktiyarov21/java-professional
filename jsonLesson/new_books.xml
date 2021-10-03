@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<books>
+    <book id="01">
+        <title>hjsdg</title>
+        <author>Karoline Kepnes</author>
+        <id>23</id>
+        <isnb>231</isnb>
+    </book>
+</books>

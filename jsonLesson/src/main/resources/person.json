@@ -1,0 +1,14 @@
+{
+  "firstName": "Arsen",
+  "lastName": "Baktiyarov",
+  "course": {
+    "author": "Arsen Baktiyarov",
+    "title": "Java Professional",
+    "description": "For everyone"
+  },
+  "personalContacts": [
+    "https://itvdn.com/ru/video/java-professional",
+    "https://www.facebook.com/yevheniitykhonov",
+    "https://www.instagram.com/yevheniitykhonov"
+  ]
+}
