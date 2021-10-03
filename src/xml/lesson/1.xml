@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--DTD = Document type definition-->
+<!--<!DOCTYPE catalog [-->
+<!--        <!ELEMENT catalog (book)*>-->
+<!--        <!ELEMENT book (author|title|genre|price|publish_date)*>-->
+<!--        <!ELEMENT author (#PCDATA)>-->
+<!--        <!ELEMENT title (#PCDATA)>-->
+<!--        <!ELEMENT genre (#PCDATA)>-->
+<!--        <!ELEMENT price (#PCDATA)>-->
+<!--        <!ATTLIST price-->
+<!--                currency CDATA #REQUIRED>-->
+<!--        <!ELEMENT publish_date (#PCDATA)>-->
+<!--        ]>-->
+
+<!-- &lt; = <
+     &gt; = >
+     &amp; = *
+     &apos; = '
+     &quot; = "
+     &nbsp; =
+-->
+<!--XSD = XML Schema definition language -->
+<catalog>
+    <book>d
+        <author>&lt;Bruce Wayne&gt;</author>
+        <title>Dark Knight Returns</title>
+        <genre>Detective&amp;</genre>
+        <price currency="RUB">1000</price>
+        <publish_date>1986-01-01</publish_date>
+    </book>
+    <book>
+        <author>Karoline Kepnes</author>
+        <title>You</title>
+        <genre>Thriller</genre>
+        <price currency="RUB">500</price>
+        <publish_date>2014-01-01</publish_date>
+    </book>
+</catalog>

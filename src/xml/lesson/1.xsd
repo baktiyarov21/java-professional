@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="catalog" type="catalogType">
+        <xs:annotation>
+            <xs:documentation><![CDATA[DTD = Document type definition<!DOCTYPE catalog [        <!ELEMENT catalog (book)*>        <!ELEMENT book (author|title|genre|price|publish_date)*>        <!ELEMENT author (#PCDATA)>        <!ELEMENT title (#PCDATA)>        <!ELEMENT genre (#PCDATA)>        <!ELEMENT price (#PCDATA)>        <!ATTLIST price                currency CDATA #REQUIRED>        <!ELEMENT publish_date (#PCDATA)>        ]> &lt; = <
+     &gt; = >
+     &amp; = *
+     &apos; = '
+     &quot; = "
+     &nbsp; =
+XSD = XML Schema definition language]]></xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="priceType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="currency" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="bookType" mixed="true">
+        <xs:sequence>
+            <xs:element name="author">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="&lt;Bruce Wayne>"/>
+                        <xs:enumeration value="Karoline Kepnes"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="title">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Dark Knight Returns"/>
+                        <xs:enumeration value="You"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="genre">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Detective&amp;"/>
+                        <xs:enumeration value="Thriller"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="priceType" name="price"/>
+            <xs:element name="publish_date">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="1986-01-01"/>
+                        <xs:enumeration value="2014-01-01"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="catalogType">
+        <xs:sequence>
+            <xs:element type="bookType" name="book" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
