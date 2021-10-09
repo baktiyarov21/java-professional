@@ -1,2 +1,0 @@
-Класс PrintStream - это именно тотystem.out.println(), m как раз и представляет объект к() - это метод класса PrintStream.
-
