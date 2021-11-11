@@ -1,0 +1,46 @@
+
+                <html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>001 SOLUTIONS PART 1</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><h4>POWER SOLUTION</h4><pre class="prettyprint linenums">public int power(int base, int exponent) {
+    if (exponent == 0) {
+      return 1;
+    }
+    return base * power(base,exponent-1);
+  }</pre><h4>FACTORIAL SOLUTION</h4><pre class="prettyprint linenums">public int factorial(int num) {
+    if (num&lt;=1) {
+      return 1;
+    }
+    return num * factorial(num-1);
+  }</pre><h4>PRODUCT OF ARRAY SOLUTION</h4><pre class="prettyprint linenums">public int productofArray(int A[], int N) 
+    { 
+        if (N &lt;= 0) 
+            return 1; 
+        return (productofArray(A, N - 1) * A[N - 1]); 
+    } </pre><h4>RECURSIVE RANGE SOLUTION</h4><pre class="prettyprint linenums">public int recursiveRange(int num) {
+     if (num&lt;=0) {
+       return 0;
+     }
+     return num + recursiveRange(num - 1);
+   } </pre><h4>FIBONACCI SOLUTION</h4><pre class="prettyprint linenums"> public int fib(int n) {
+    if (n&lt;0) {
+      return -1;
+    }
+    if (n==0 || n==1) {
+      return n;
+    }
+    return fib(n-1) + fib(n-2);
+  }</pre><p><br></p></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>
+                

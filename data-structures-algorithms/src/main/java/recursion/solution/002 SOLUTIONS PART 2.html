@@ -1,0 +1,54 @@
+
+                <html>
+                <head>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <title>002 SOLUTIONS PART 2</title>
+                </head>
+                <body>
+                <div class="container">
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p class="lead"><h4>REVERSE SOLUTION</h4><pre class="prettyprint linenums">public String reverse(String str)
+    {
+        if (str.isEmpty())
+            return str;
+        //Calling Function Recursively
+        return reverse(str.substring(1)) + str.charAt(0);
+    }</pre><h4>IS PALINDROME SOLUTION</h4><pre class="prettyprint linenums"> public  boolean isPalindrome(String s)
+        {   // if length is 0 or 1 then String is palindrome
+            if(s.length() == 0 || s.length() == 1)
+                return true; 
+            if(s.charAt(0) == s.charAt(s.length()-1))
+            return isPalindrome(s.substring(1, s.length()-1));
+            return false;
+        }</pre><h4>SOME RECURSIVE SOLUTION</h4><pre class="prettyprint linenums"> public boolean someRecursive(int[] arr, OddFunction odd) {
+    if (arr.length == 0 ) {
+      return false;
+    } else if (odd.run(arr[0]) == false) {
+      return someRecursive(Arrays.copyOfRange(arr, 1, arr.length), odd);
+    } else {
+      return true;
+    }
+  }</pre><h4>FIRST UPPERCASE SOLUTION</h4><pre class="prettyprint linenums">static char first(String str)
+    {
+        for (int i = 0; i &lt; str.length(); i++)
+            if (Character.isUpperCase(str.charAt(i)))
+                return str.charAt(i);
+        return 0;
+    }</pre><h4>CAPITALIZE WORD SOLUTION</h4><pre class="prettyprint linenums">public static String capitalizeWord(String str){  
+    String words[]=str.split("\\s");  
+    String capitalizeWord="";  
+    for(String w:words){  
+        String first=w.substring(0,1);  
+        String afterfirst=w.substring(1);  
+        capitalizeWord+=first.toUpperCase()+afterfirst+" ";  
+    }  
+    return capitalizeWord.trim(); 
+}</pre></p>
+                </div>
+                </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </body>
+                </html>
+                
