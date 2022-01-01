@@ -10,7 +10,10 @@ public class Main {
         System.out.println(singlyLinkedList.size);
         System.out.println(singlyLinkedList.head.value);
         System.out.println(singlyLinkedList.head.next.value);
-        singlyLinkedList.traverseList();
         singlyLinkedList.searchNode(2);
+        singlyLinkedList.deleteNode(2);
+        singlyLinkedList.traverseList();
+        singlyLinkedList.deleteAll();
+        singlyLinkedList.traverseList();
     }
 }
