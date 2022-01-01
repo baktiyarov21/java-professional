@@ -5,7 +5,7 @@ public class SinglyLinkedList {
     public Node tail;
     public int size;
 
-    public Node createSinglyLinkedList(int value) {
+    public Node create(int value) {
         head = new Node(); // O(1)
         Node node = new Node(); // O(1)
         node.next = null; // O(1)
@@ -16,12 +16,11 @@ public class SinglyLinkedList {
         return head;
     }
 
-    public void insertToLinkedList(int value,
-                                   int location) {
+    public void insertNode(int value, int location) {
         Node node = new Node(); // O(1)
         node.value = value; // O(1)
         if (head == null) {  // O(1)
-            createSinglyLinkedList(value); // O(1)
+            create(value); // O(1)
         } else if (location == 0) { // O(1)
             node.next = node; // O(1)
             head = node; // O(1)
@@ -41,6 +40,37 @@ public class SinglyLinkedList {
             node.next = nextNode; // O(1)
         }
         size++; // O(1)
+    }
+
+    public void traverseList() {
+        if (head == null) { //O(1)
+            System.out.println("List is doesnt exists"); //O(1)
+        } else  { //O(1)
+            Node tempNode = head; //O(1)
+            for (int i = 0; i < size; i++) { //O(N)
+                System.out.print(tempNode.value); //O(1)
+                if (i != size - 1) { //O(1)
+                    System.out.print("->"); //O(1)
+                }
+                tempNode = tempNode.next; //O(1)
+            }
+        }
+        System.out.println("\n"); //O(1)
+    }
+
+    public boolean searchNode(int value) {
+        if (head != null) {
+            Node tempNode = head; //O(1)
+            for (int i = 0; i < size; i++) { // O(N)
+                if (tempNode.value == value) { // O(1)
+                    System.out.println("Node's at location " + i); // O(1)
+                    return true; // O(1)
+                }
+                tempNode = tempNode.next; // O(1)
+            }
+        }
+        System.out.println("Node not found"); // O(1)
+        return false; // O(1)
     }
 
 
