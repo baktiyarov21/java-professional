@@ -15,5 +15,14 @@ public class Main {
         singlyLinkedList.traverseList();
         singlyLinkedList.deleteAll();
         singlyLinkedList.traverseList();
+
+        CircularSinglyLinkedList circularList = new CircularSinglyLinkedList();
+        circularList.create(2);
+        System.out.println(circularList.head.value);
+        System.out.println(circularList.head.next.value);
+        circularList.insertNode(4,2);
+        circularList.insertNode(21,3);
+        System.out.println(circularList.head.next.value);
+        circularList.traverseList();
     }
 }
