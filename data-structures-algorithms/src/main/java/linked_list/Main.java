@@ -24,5 +24,8 @@ public class Main {
         circularList.insertNode(21,3);
         System.out.println(circularList.head.next.value);
         circularList.traverseList();
+        circularList.deleteNode(3);
+        System.out.println();
+        circularList.traverseList();
     }
 }
