@@ -3,7 +3,7 @@ package linked_list;
 public class Main {
     public static void main(String[] args) {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        singlyLinkedList.create(5);
+        singlyLinkedList.createList(5);
         singlyLinkedList.insertNode(3, 0);
         singlyLinkedList.insertNode(2, 1);
         singlyLinkedList.insertNode(4, 2);
@@ -17,7 +17,7 @@ public class Main {
         singlyLinkedList.traverseList();
 
         CircularSinglyLinkedList circularList = new CircularSinglyLinkedList();
-        circularList.create(2);
+        circularList.createList(2);
         System.out.println(circularList.head.value);
         System.out.println(circularList.head.next.value);
         circularList.insertNode(4,2);
@@ -27,5 +27,8 @@ public class Main {
         circularList.deleteNode(3);
         System.out.println();
         circularList.traverseList();
+
+        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+        doublyLinkedList.createList(3);
     }
 }

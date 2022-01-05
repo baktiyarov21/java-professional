@@ -1,45 +1,47 @@
 package linked_list;
 
-public class CircularSinglyLinkedList extends SinglyLinkedList {
-    public Node head;
-    public Node tail;
+import linked_list.node.SinglyNode;
+
+public class CircularSinglyLinkedList implements LinkedList {
+    public SinglyNode head;
+    public SinglyNode tail;
     public int size;
 
     @Override
-    public Node create(int nodeValue) {
-        head = new Node(); // O(1)
-        Node node = new Node();  // O(1)
-        node.value = nodeValue; // O(1)
-        node.next = node; // O(1)
-        head = node; // O(1)
-        tail = node; // O(1)
+    public SinglyNode createList(int nodeValue) {
+        head = new SinglyNode(); // O(1)
+        SinglyNode singlyNode = new SinglyNode();  // O(1)
+        singlyNode.value = nodeValue; // O(1)
+        singlyNode.next = singlyNode; // O(1)
+        head = singlyNode; // O(1)
+        tail = singlyNode; // O(1)
         size = 1; // O(1)
         return head; // O(1)
     }
 
     @Override
     public void insertNode(int nodeValue, int location) {
-        Node node = new Node();// O(1)
-        node.value = nodeValue;// O(1)
+        SinglyNode singlyNode = new SinglyNode();// O(1)
+        singlyNode.value = nodeValue;// O(1)
         if (head == null) {// O(1)
-            create(nodeValue);// O(1)
+            createList(nodeValue);// O(1)
         } else if (location == 0) {// O(1)
-            node.next = node;// O(1)
-            head = node;// O(1)
+            singlyNode.next = singlyNode;// O(1)
+            head = singlyNode;// O(1)
             tail.next = head;// O(1)
         } else if (location >= size) {// O(1)
-            tail.next = node;// O(1)
-            tail = node;// O(1)
+            tail.next = singlyNode;// O(1)
+            tail = singlyNode;// O(1)
             tail.next = head;// O(1)
         } else {
-            Node tempNode = head;  // O(1)
+            SinglyNode tempSinglyNode = head;  // O(1)
             int index = 0;  // O(1)
             while (index < location - 1) { // O(N)
-                tempNode = tempNode.next; // O(1)
+                tempSinglyNode = tempSinglyNode.next; // O(1)
                 index++; // O(1)
             }
-            node.next = tempNode.next;// O(1)
-            tempNode.next = node;// O(1)
+            singlyNode.next = tempSinglyNode.next;// O(1)
+            tempSinglyNode.next = singlyNode;// O(1)
         }
         size++;// O(1)
     }
@@ -47,17 +49,33 @@ public class CircularSinglyLinkedList extends SinglyLinkedList {
     @Override
     public void traverseList() {
         if (head != null) {// O(1)
-            Node tempNode = head;// O(1)
+            SinglyNode tempSinglyNode = head;// O(1)
             for (int i = 0; i < size; i++) {// O(N)
-                System.out.print(tempNode.value);// O(1)
+                System.out.print(tempSinglyNode.value);// O(1)
                 if (i != size - 1) {// O(1)
                     System.out.print(" -> ");// O(1)
                 }
-                tempNode = tempNode.next;// O(1)
+                tempSinglyNode = tempSinglyNode.next;// O(1)
             }
         } else {
             System.out.println("List doesnt exists");// O(1)
         }
+    }
+
+    @Override
+    public boolean searchNode(int value) {
+        if (head != null) {
+            SinglyNode tempSinglyNode = head; //O(1)
+            for (int i = 0; i < size; i++) { // O(N)
+                if (tempSinglyNode.value == value) { // O(1)
+                    System.out.println("SinglyNode's at location " + i); // O(1)
+                    return true; // O(1)
+                }
+                tempSinglyNode = tempSinglyNode.next; // O(1)
+            }
+        }
+        System.out.println("SinglyNode not found"); // O(1)
+        return false; // O(1)
     }
 
     @Override
@@ -74,24 +92,24 @@ public class CircularSinglyLinkedList extends SinglyLinkedList {
                 head = null; // O(1)
             }
         } else if (location >= size) {
-            Node tempNode = head; // O(1)
+            SinglyNode tempSinglyNode = head; // O(1)
             for (int i = 0; i < size - 1; i++) { // O(N)
-                tempNode = tempNode.next; // O(1)
+                tempSinglyNode = tempSinglyNode.next; // O(1)
             }
-            if (tempNode == head) { // O(1)
+            if (tempSinglyNode == head) { // O(1)
                 head.next = null;// O(1)
                 head = null;// O(1)
                 size = 0; // O(1)
             }
-            tempNode.next = null; // O(1)
-            tail = tempNode; // O(1)
+            tempSinglyNode.next = null; // O(1)
+            tail = tempSinglyNode; // O(1)
             size--; // O(1)
         } else {
-            Node tempNode = head; // O(1)
+            SinglyNode tempSinglyNode = head; // O(1)
             for (int i = 0; i < location - 1; i++) { // O(N)
-                tempNode = tempNode.next; // O(1)
+                tempSinglyNode = tempSinglyNode.next; // O(1)
             }
-            tempNode.next = tempNode.next.next; // O(1)
+            tempSinglyNode.next = tempSinglyNode.next.next; // O(1)
         }
     }
 
