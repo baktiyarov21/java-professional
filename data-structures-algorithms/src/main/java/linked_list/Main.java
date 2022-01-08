@@ -30,5 +30,9 @@ public class Main {
 
         DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
         doublyLinkedList.createList(3);
+        doublyLinkedList.insertNode(4, 2);
+        doublyLinkedList.insertNode(5, 3);
+        System.out.println();
+        doublyLinkedList.reverseTraverse();
     }
 }
