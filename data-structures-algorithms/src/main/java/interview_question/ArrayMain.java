@@ -1,13 +1,13 @@
-package big_o_interview;
+package interview_question;
 
 import java.util.Arrays;
 
 
-public class Main {
+public class ArrayMain {
   public static void main(String[] args) {
-    Main main = new Main();
+    ArrayMain arrayMain = new ArrayMain();
     int[] arr = new int[] {1, 2, 3, 4};
-    main.reverseArr(arr);
+    arrayMain.reverseArr(arr);
  
   } 
 
