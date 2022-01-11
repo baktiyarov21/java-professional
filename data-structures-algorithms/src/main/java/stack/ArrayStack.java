@@ -1,6 +1,6 @@
 package stack;
 
-public class ArrayStack {
+public class ArrayStack implements Stack{
     int[] arr;
     int topOfStack;
 
@@ -11,6 +11,7 @@ public class ArrayStack {
     }
 
 
+    @Override
     public void push(int value) {
         if (isFull()) { // O(1)
             System.out.println("The stack is full"); // O(1)
@@ -21,21 +22,24 @@ public class ArrayStack {
         }
     }
 
+    @Override
     public int pop() {
-        if (isEmpty()) {
-            System.out.println("The is empty");
-            return -1;
+        if (isEmpty()) { // O(1)
+            System.out.println("The is empty"); // O(1)
+            return -1; // O(1)
         } else {
-            int top = arr[topOfStack];
-            topOfStack--;
-            return top;
+            int top = arr[topOfStack]; // O(1)
+            topOfStack--; // O(1)
+            return top; // O(1)
         }
     }
 
+    @Override
     public boolean isEmpty() {
         return topOfStack == -1;  // O(1)
     }
 
+    @Override
     public boolean isFull() {
         if (topOfStack == arr.length - 1) { // O(1)
             System.out.println("The stack is full"); // O(1)
@@ -44,5 +48,19 @@ public class ArrayStack {
         return false;
     }
 
+    @Override
+    public void deleteStack() {
+        arr = null; // O(1)
+        System.out.println("The stack is successfully deleted"); // O(1)
+    }
 
+    @Override
+    public int peek() {
+        if (isEmpty()) {
+            System.out.println("The stack is empty");
+            return -1;
+        } else {
+            return arr[topOfStack];
+        }
+    }
 }
