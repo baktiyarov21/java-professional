@@ -6,7 +6,7 @@ public class MainLesson3 {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         String url = "jdbc:mysql://localhost:3306/gb_database";
         String userName = "root";
-        String password = "248163264Smallville";
+        String password = "root";
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         try (Connection connection = DriverManager.getConnection(url, userName, password)){

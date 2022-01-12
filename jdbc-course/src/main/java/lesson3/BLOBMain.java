@@ -11,7 +11,7 @@ public class BLOBMain {
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
         String url = "jdbc:mysql://localhost:3306/gb_database";
         String userName = "root";
-        String password = "248163264Smallville";
+        String password = "root";
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         try (Connection connection = DriverManager.getConnection(url, userName, password);

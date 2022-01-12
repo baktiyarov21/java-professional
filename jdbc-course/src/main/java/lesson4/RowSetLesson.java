@@ -8,7 +8,7 @@ import java.sql.*;
 public class RowSetLesson {
     static String url = "jdbc:mysql://localhost:3306/gb_database";
     static String userName = "root";
-    static String password = "248163264Smallville";
+    static String password = "root";
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         ResultSet resultSet = getResultSet();

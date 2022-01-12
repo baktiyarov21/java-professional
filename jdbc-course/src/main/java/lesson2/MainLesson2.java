@@ -13,7 +13,7 @@ public class MainLesson2 {
         ArrayList<Abonent> abonents = new ArrayList<>();
 
         String user = "root";
-        String password = "248163264Smallville";
+        String password = "root";
         String url = "jdbc:mysql://localhost:3306/gb_database";
         Class.forName("com.mysql.cj.jdbc.Driver");
         try (Connection connection = DriverManager.getConnection(url, user, password);
