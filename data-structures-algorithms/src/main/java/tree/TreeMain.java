@@ -46,11 +46,22 @@ public class TreeMain {
         node4.right = node9;
         binaryTree.root = node1;
         System.out.println(binaryTree.root.value);
+        System.out.println("\nPreOrder: ");
         binaryTree.preOrder(binaryTree.root);
 
-        System.out.println();
+        System.out.println("\nInOrder: ");
         binaryTree.inOrder(binaryTree.root);
 
+        System.out.println("\nPostOrder: ");
+        binaryTree.postOrder(binaryTree.root);
+
+        System.out.println("\nLevelOrder: ");
+        binaryTree.levelOrder();
+        System.out.println("\n");
+        binaryTree.searchNode("N4");
+        binaryTree.insetNode("N10");
+        binaryTree.deleteNode("N6");
+        binaryTree.levelOrder();
 
 
 
